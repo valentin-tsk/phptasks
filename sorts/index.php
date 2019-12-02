@@ -1,10 +1,10 @@
 <?
 $pageTitle = "Task 1: sorts efficiency";
 include $_SERVER['DOCUMENT_ROOT'] . "/src/layout/header.php";
-include $_SERVER['DOCUMENT_ROOT'] . "/src/classes/Sorter.php";
-include $_SERVER['DOCUMENT_ROOT'] . "/src/classes/Timer.php";
+include $_SERVER['DOCUMENT_ROOT'] . "/src/classes/sort/Sorter.php";
+include $_SERVER['DOCUMENT_ROOT'] . "/src/classes/sort/Timer.php";
 
-$sorter = new \PhpLabs\Sorter();
+$sorter = new \PhpTasks\Sort\Sorter();
 $algorithms = ['insertion', 'quick', 'bubble', 'php'];
 
 $arrayLength = isset($_POST['array_length']) ? abs(intval($_POST['array_length'])) : 500;

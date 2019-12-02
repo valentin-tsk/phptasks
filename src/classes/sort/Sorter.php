@@ -1,10 +1,10 @@
 <?
 
-namespace PhpLabs;
+namespace PhpTasks\Sort;
 
 /**
  * Class Sorter
- * @package PhpLabs
+ * @package PhpTasks\Sort
  */
 class Sorter
 {

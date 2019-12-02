@@ -1,10 +1,10 @@
 <?
 
-namespace PhpLabs;
+namespace PhpTasks\Sort;
 
 /**
  * Class Timer
- * @package PhpLabs
+ * @package PhpTasks\Sort
  */
 class Timer
 {
