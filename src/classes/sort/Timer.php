@@ -31,7 +31,7 @@ class Timer
     }
 
     /**
-     * @return int|mixed
+     * @return int
      */
     public function getTime()
     {

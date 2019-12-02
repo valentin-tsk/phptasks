@@ -21,11 +21,16 @@ class FuelEconomyCalculator
     {
         if (floatval($weight) > floatval($car->getCapacity())) {
             throw new Exception('car cant carry that much');
-        } else if (floatval($weight < 0) || floatval($distance < 0)) {
-            throw new Exception('enter correct positive weight and distance');
-        } else {
-            //i dont really have to know the formula, just random calculations
-            return ($distance / (($weight + $car->getWeight() / $car->getEngine()->getPower()) - $car->getEngine()->getVolume()));
         }
+
+        if (floatval($weight < 0) || floatval($distance < 0)) {
+            throw new Exception('enter correct positive weight and distance');
+        }
+
+        //i dont really have to know the formula, just random calculations
+        $weightCoefficient = $weight + $car->getWeight() / $car->getEngine()->getPower();
+        $volume = $car->getEngine()->getVolume();
+        return ($distance / ($weightCoefficient - $volume));
+
     }
 }

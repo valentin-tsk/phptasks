@@ -3,40 +3,32 @@
 namespace PhpTasks\Cars;
 
 /**
- * Interface Transport
+ * Interface ITransport
  * @package PhpTasks\Cars
  */
-interface Transport{
+interface ITransport{
     /**
-     * @return mixed
+     * @return int
      */
     public function getMaxSpeed();
 
     /**
-     * @param int $maxSpeed
-     * @return mixed
-     */
-    public function setMaxSpeed($maxSpeed);
-
-    /**
-     * @return mixed
+     * @return float
      */
     public function getCapacity();
 
     /**
      * @param float $capacity
-     * @return mixed
      */
     public function setCapacity($capacity);
 
     /**
-     * @return mixed
+     * @return float
      */
     public function getWeight();
 
     /**
      * @param float $weight
-     * @return mixed
      */
     public function setWeight($weight);
 }

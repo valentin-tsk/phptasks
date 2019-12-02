@@ -3,10 +3,10 @@ namespace PhpTasks\Cars;
 
 
 /**
- * Class EngineTransport
+ * Class AEngineTransport
  * @package PhpTasks\Cars
  */
-abstract class EngineTransport implements GasolineConsumer
+abstract class AEngineTransport implements IGasolineConsumer
 {
     /**
      * @var Engine
@@ -18,7 +18,7 @@ abstract class EngineTransport implements GasolineConsumer
     private $gasolineType;
 
     /**
-     * EngineTransport constructor.
+     * AEngineTransport constructor.
      * @param Engine $engine
      * @param $gasolineType
      */
@@ -36,7 +36,7 @@ abstract class EngineTransport implements GasolineConsumer
     }
 
     /**
-     * @param mixed $gasolineType
+     * @param string $gasolineType
      */
     public function setGasolineType($gasolineType)
     {

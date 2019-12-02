@@ -1,8 +1,8 @@
 <?
 $pageTitle = "Task 1: sorts efficiency";
-include $_SERVER['DOCUMENT_ROOT'] . "/src/layout/header.php";
-include $_SERVER['DOCUMENT_ROOT'] . "/src/classes/sort/Sorter.php";
-include $_SERVER['DOCUMENT_ROOT'] . "/src/classes/sort/Timer.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/src/layout/header.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/src/classes/sort/Sorter.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/src/classes/sort/Timer.php";
 
 $sorter = new \PhpTasks\Sort\Sorter();
 $algorithms = ['insertion', 'quick', 'bubble', 'php'];
@@ -43,5 +43,5 @@ if ($arrayLength < 2) {
     <h2>Nothing to sort, try bigger array</h2>
 <? } ?>
 <?
-include $_SERVER['DOCUMENT_ROOT'] . "/src/layout/footer.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/src/layout/footer.php";
 ?>

@@ -3,18 +3,18 @@
 namespace PhpTasks\Cars;
 
 /**
- * Interface GasolineConsumer
+ * Interface IGasolineConsumer
  * @package PhpTasks\Cars
  */
-interface GasolineConsumer{
+interface IGasolineConsumer{
     /**
      * @param string $gasolineType
-     * @return mixed
+     * @return string
      */
     public function setGasolineType($gasolineType);
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getGasolineType();
 }

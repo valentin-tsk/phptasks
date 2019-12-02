@@ -1,6 +1,6 @@
 <?
 $title = "Php tutorial labs index page";
-include $_SERVER['DOCUMENT_ROOT'] . "/src/layout/header.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/src/layout/header.php";
 ?>
 <ul>
     <li>
@@ -12,5 +12,5 @@ include $_SERVER['DOCUMENT_ROOT'] . "/src/layout/header.php";
 </ul>
 
 <?
-include $_SERVER['DOCUMENT_ROOT'] . "/src/layout/footer.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/src/layout/footer.php";
 ?>

@@ -2,18 +2,17 @@
 namespace PhpTasks\Cars;
 
 /**
- * Interface WheelsTransport
+ * Interface IWheelsITransport
  * @package PhpTasks\Cars
  */
-interface WheelsTransport extends Transport {
+interface IWheelsITransport extends ITransport {
     /**
      * @param string $wheelsType
-     * @return mixed
      */
     public function setWheelsType($wheelsType);
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getWheelsType();
 }

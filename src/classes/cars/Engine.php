@@ -2,6 +2,8 @@
 
 namespace PhpTasks\Cars;
 
+use Couchbase\DateRangeSearchQuery;
+
 /**
  * Class Engine
  * @package PhpTasks\Cars
@@ -35,32 +37,32 @@ final class Engine{
         $this->producer = $producer;
         $this->power = $power;
         $this->volume = $volume;
-        $this->createDate = time();
+        $this->createDate = date('Y-m-d H:i:s');
     }
 
     /**
-     * @return mixed
+     * @return float
      */
     public function getVolume(){
         return $this->volume;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getPower(){
         return $this->power;
     }
 
     /**
-     * @return int
+     * @return \DateTime
      */
     public function getCreateDate(){
         return $this->createDate;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getProducer(){
         return $this->producer;

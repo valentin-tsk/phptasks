@@ -1,14 +1,14 @@
 <?
 $pageTitle = "Task 2: Cars Fuel Economy";
-include $_SERVER['DOCUMENT_ROOT'] . "/src/layout/header.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/src/layout/header.php";
 
-include $_SERVER['DOCUMENT_ROOT'] . "/src/classes/cars/Engine.php";
-include $_SERVER['DOCUMENT_ROOT'] . "/src/classes/cars/GasolineConsumer.php";
-include $_SERVER['DOCUMENT_ROOT'] . "/src/classes/cars/EngineTransport.php";
-include $_SERVER['DOCUMENT_ROOT'] . "/src/classes/cars/Transport.php";
-include $_SERVER['DOCUMENT_ROOT'] . "/src/classes/cars/WheelsTransport.php";
-include $_SERVER['DOCUMENT_ROOT'] . "/src/classes/cars/Car.php";
-include $_SERVER['DOCUMENT_ROOT'] . "/src/classes/cars/FuelEconomyCalculator.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/src/classes/cars/Engine.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/src/classes/cars/IGasolineConsumer.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/src/classes/cars/AEngineTransport.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/src/classes/cars/ITransport.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/src/classes/cars/IWheelsITransport.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/src/classes/cars/Car.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/src/classes/cars/FuelEconomyCalculator.php";
 
 $engineData = [
         'toyotaLight'=>[
@@ -38,7 +38,7 @@ $engines = [];
 $carsData = [
     'LexusZ1' => [
             'engine'=>'ToyotaSport',
-            'gasoline_type' => 92,
+            'gasoline_type' => '92',
             'weight' => 1400,
             'capacity' => 800,
             'max_speed' => 250,
@@ -46,7 +46,7 @@ $carsData = [
     ],
     'Carina' => [
         'engine'=>'ToyotaSport',
-        'gasoline_type' => 92,
+        'gasoline_type' => '92',
         'weight' => 950,
         'capacity' => 400,
         'max_speed' => 190,
@@ -54,7 +54,7 @@ $carsData = [
     ],
     'Mustang' => [
         'engine'=>'FordSport',
-        'gasoline_type' => 92,
+        'gasoline_type' => '92',
         'weight' => 1200,
         'capacity' => 350,
         'max_speed' => 260,
@@ -62,7 +62,7 @@ $carsData = [
     ],
     'Focus' => [
         'engine'=>'FordLight',
-        'gasoline_type' => 92,
+        'gasoline_type' => '92',
         'weight' => 1100,
         'capacity' => 450,
         'max_speed' => 185,
@@ -111,5 +111,5 @@ try {
     <h2><?=$e->getMessage()?></h2>
 <? } ?>
 <?
-include $_SERVER['DOCUMENT_ROOT'] . "/src/layout/footer.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/src/layout/footer.php";
 ?>

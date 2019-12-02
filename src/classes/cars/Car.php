@@ -1,7 +1,7 @@
 <?
 namespace PhpTasks\Cars;
 
-class Car extends EngineTransport implements WheelsTransport {
+class Car extends AEngineTransport implements IWheelsITransport {
     /**
      * @var float
      */
@@ -32,14 +32,14 @@ class Car extends EngineTransport implements WheelsTransport {
     {
         parent::__construct($engine, $gasolineType);
 
+        $this->maxSpeed = $maxSpeed;
         $this->setWheelsType($wheelsType);
         $this->setCapacity($capacity);
-        $this->setMaxSpeed($maxSpeed);
         $this->setWeight($weight);
     }
 
     /**
-     * @return mixed
+     * @return float
      */
     public function getCapacity()
     {
@@ -55,15 +55,7 @@ class Car extends EngineTransport implements WheelsTransport {
     }
 
     /**
-     * @param int $maxSpeed
-     */
-    public function setMaxSpeed($maxSpeed)
-    {
-        $this->maxSpeed = $maxSpeed;
-    }
-
-    /**
-     * @return mixed
+     * @return int
      */
     public function getMaxSpeed()
     {
@@ -71,7 +63,7 @@ class Car extends EngineTransport implements WheelsTransport {
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getGasolineType()
     {
@@ -79,7 +71,7 @@ class Car extends EngineTransport implements WheelsTransport {
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function  getWheelsType()
     {
@@ -95,7 +87,7 @@ class Car extends EngineTransport implements WheelsTransport {
     }
 
     /**
-     * @return mixed
+     * @return float
      */
     public function getWeight()
     {
